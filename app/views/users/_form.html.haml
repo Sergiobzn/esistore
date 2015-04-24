@@ -1,0 +1,6 @@
+-# Te redirige directamente a user#create
+= simple_form_for(@user) do |f|
+  = f.input :email, :required => true
+  = f.input :password, :required => true
+  = f.input :role, collection: User::ROLES, :include_blank => false, selected: "student"
+  = f.button :submit
