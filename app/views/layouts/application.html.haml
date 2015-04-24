@@ -8,3 +8,5 @@
     = csrf_meta_tags
   %body
     = yield
+    -# Destruye la sesion
+    = link_to "LOGOUT", destroy_user_session_path, method: :delete
